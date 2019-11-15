@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-cdk-popover-overlay": [
+        "dist/ngx-cdk-popover-overlay"
+      ],
+      "ngx-cdk-popover-overlay/*": [
+        "dist/ngx-cdk-popover-overlay/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

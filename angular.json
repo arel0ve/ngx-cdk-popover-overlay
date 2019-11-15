@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "NgxCdkPopoverOverlay": {
+      "projectType": "library",
+      "root": "projects/ngx-cdk-popover-overlay",
+      "sourceRoot": "projects/ngx-cdk-popover-overlay/src",
+      "prefix": "NgxCdk",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-cdk-popover-overlay/tsconfig.lib.json",
+            "project": "projects/ngx-cdk-popover-overlay/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-cdk-popover-overlay/src/test.ts",
+            "tsConfig": "projects/ngx-cdk-popover-overlay/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-cdk-popover-overlay/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-cdk-popover-overlay/tsconfig.lib.json",
+              "projects/ngx-cdk-popover-overlay/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "CdkPopoverOverlay"
 }
